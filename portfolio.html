@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrist-Relief AI | Project Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #020617; /* Slate 950 */
+            color: #cbd5e1; /* Slate 300 */
+        }
+
+        h1, h2, h3, h4, .font-tech {
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        /* Neon Glow Utilities */
+        .text-neon-cyan {
+            color: #22d3ee;
+            text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+        }
+        
+        .text-neon-purple {
+            color: #c084fc;
+            text-shadow: 0 0 10px rgba(192, 132, 252, 0.4);
+        }
+
+        .border-neon {
+            box-shadow: 0 0 10px rgba(34, 211, 238, 0.1);
+        }
+
+        /* Grid Background Pattern */
+        .bg-grid-pattern {
+            background-size: 50px 50px;
+            background-image: 
+                linear-gradient(to right, rgba(30, 41, 59, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(30, 41, 59, 0.3) 1px, transparent 1px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        
+        /* Timeline styling */
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #0f172a;
+            border: 4px solid #22d3ee;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Clickable Logo -->
+                <div class="flex items-center">
+                    <a href="#home" class="flex-shrink-0 hover:opacity-80 transition-opacity cursor-pointer">
+                        <span class="font-tech text-2xl font-bold text-white tracking-widest uppercase">WRIST<span class="text-cyan-400">AI</span></span>
+                    </a>
+                </div>
+                <!-- Clean Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#home" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors">Home</a>
+                        <a href="#demo" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors text-cyan-400">Prototype</a>
+                        <a href="#team" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors">Team</a>
+                        <a href="#product" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors">Product</a>
+                        <a href="#research" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors">Research</a>
+                        <a href="#gallery" class="hover:text-cyan-400 px-3 py-2 rounded-md text-xs font-bold uppercase tracking-wider transition-colors">Gallery</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE 1: HOME / LANDING -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center bg-grid-pattern pt-16">
+        <!-- Abstract Tech Background Elements -->
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/5 backdrop-blur-sm">
+                <span class="text-cyan-400 font-tech uppercase tracking-widest text-sm">Design Concept: Ergonomic Guardian</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                Elevating Performance<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">Preserving Wrist Health</span>
+            </h1>
+            
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-400">
+                Wrist-Relief AI is a concept prototype for a smart wrist-relief glove and companion app. It combines live strain monitoring, warm-up and recovery protocols, and AI-driven guidance to help gamers and students prevent repetitive strain injuries (RSI) during long sessions.
+            </p>
+            
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#demo" class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] font-tech uppercase tracking-widest text-lg">
+                    Launch App Prototype
+                </a>
+            </div>
+            
+            <!-- Hero Monitor Mockup pulled from the app's Monitor view -->
+            <div class="mt-16 rounded-2xl border border-slate-800 bg-slate-900/50 p-4 max-w-4xl mx-auto shadow-2xl">
+                <div class="bg-slate-950 border border-slate-800 rounded-[32px] max-w-[380px] mx-auto shadow-xl overflow-hidden">
+                    <div class="px-6 py-5 flex items-center justify-between bg-slate-950/80 border-b border-slate-900">
+                        <div>
+                            <h3 class="font-tech text-xl font-bold text-white tracking-wider"><span class="text-cyan-400">WRIST</span>AI</h3>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-[0.2em]">Ergonomic Guardian</p>
+                        </div>
+                        <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </div>
+                    </div>
+
+                    <div class="px-6 py-6 space-y-6">
+                        <div class="relative w-full aspect-square max-h-[280px] mx-auto flex items-center justify-center">
+                            <div class="absolute inset-0 rounded-full border border-slate-800/50 scale-90"></div>
+                            <div class="absolute inset-0 rounded-full border border-slate-800/30 scale-75"></div>
+                            <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" stroke-width="8" />
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="#22d3ee" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="167" stroke-linecap="round" class="drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]" />
+                            </svg>
+                            <div class="absolute text-center z-10">
+                                <div class="text-xs text-slate-400 uppercase tracking-widest mb-1">Strain Load</div>
+                                <div class="text-5xl font-tech font-bold text-white">41%</div>
+                                <div class="text-sm font-semibold text-cyan-400 mt-1">Moderate</div>
+                            </div>
+                            <div class="absolute bottom-4 flex items-center gap-2 bg-slate-800/80 px-3 py-1 rounded-full backdrop-blur-sm border border-slate-700">
+                                <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                <span class="text-xs font-bold tracking-wide">LIVE MONITORING</span>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+                                <div class="flex items-center gap-2 mb-2 text-slate-400">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <span class="text-xs font-bold uppercase">Session</span>
+                                </div>
+                                <div class="text-2xl font-tech font-bold">02:14<span class="text-sm text-slate-500 ml-1">hr</span></div>
+                            </div>
+                            <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+                                <div class="flex items-center gap-2 mb-2 text-slate-400">
+                                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                    <span class="text-xs font-bold uppercase">APM</span>
+                                </div>
+                                <div class="text-2xl font-tech font-bold">142<span class="text-sm text-slate-500 ml-1">avg</span></div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gradient-to-r from-slate-800 to-slate-900 p-4 rounded-2xl border-l-4 border-emerald-500 shadow-lg flex justify-between items-center">
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Micro-break needed soon</h3>
+                                <p class="text-xs text-slate-400 mt-1">Keep neutral position.</p>
+                            </div>
+                            <button class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-4 py-2 rounded-lg font-semibold transition-colors">Check</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Digital Mockup Modal -->
+    <div id="digital-modal" class="fixed inset-0 bg-black/70 z-50 hidden flex items-center justify-center p-6">
+        <div class="relative w-full max-w-5xl">
+            <button id="close-digital-modal" class="absolute -top-3 -right-3 bg-slate-900 text-white rounded-full w-10 h-10 border border-slate-700 shadow-lg flex items-center justify-center hover:bg-slate-800">✕</button>
+            <div id="digital-mock-slider-modal" class="relative aspect-video bg-slate-900 overflow-hidden rounded-2xl">
+                <!-- Slide: Monitor -->
+                <div data-slide="0" class="absolute inset-0 w-full h-full p-6 flex items-center justify-center">
+                    <div class="w-full max-w-[320px] aspect-[9/19] bg-slate-950 border border-slate-800 rounded-[28px] overflow-hidden shadow-2xl flex flex-col">
+                        <!-- Status Bar -->
+                        <div class="flex justify-between items-center px-5 py-2 bg-slate-950/90 backdrop-blur text-[10px] text-slate-400">
+                            <span>12:42 PM</span>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="px-5 py-4 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-tech text-lg font-bold text-white tracking-wider"><span class="text-cyan-400">WRIST</span>AI</h3>
+                                <p class="text-[11px] text-slate-400 uppercase tracking-[0.2em]">Ergonomic Guardian</p>
+                            </div>
+                            <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </div>
+                        </div>
+
+                        <div class="px-5 pb-4 flex-1 space-y-5 overflow-hidden">
+                            <div class="relative w-full aspect-square max-h-[230px] mx-auto flex items-center justify-center">
+                                <div class="absolute inset-0 rounded-full border border-slate-800/50 scale-90"></div>
+                                <div class="absolute inset-0 rounded-full border border-slate-800/30 scale-75"></div>
+                                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" stroke-width="8" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#facc15" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="136" stroke-linecap="round" class="drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]" />
+                                </svg>
+                                <div class="absolute text-center z-10">
+                                    <div class="text-xs text-slate-400 uppercase tracking-widest mb-1">Strain Load</div>
+                                    <div class="text-5xl font-tech font-bold text-white">52%</div>
+                                    <div class="text-sm font-semibold text-yellow-400 mt-1">Moderate Load</div>
+                                </div>
+                                <div class="absolute bottom-3 flex items-center gap-2 bg-slate-800/80 px-3 py-1 rounded-full backdrop-blur-sm border border-slate-700">
+                                    <div class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+                                    <span class="text-xs font-bold tracking-wide">LIVE MONITORING</span>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+                                    <div class="flex items-center gap-2 mb-2 text-slate-400 text-xs">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                        <span class="font-bold uppercase">Session</span>
+                                    </div>
+                                    <div class="text-2xl font-tech font-bold">02:14<span class="text-sm text-slate-500 ml-1">hr</span></div>
+                                </div>
+                                <div class="bg-slate-900 border border-slate-800 p-4 rounded-2xl">
+                                    <div class="flex items-center gap-2 mb-2 text-slate-400 text-xs">
+                                        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                                        <span class="font-bold uppercase">APM</span>
+                                    </div>
+                                    <div class="text-2xl font-tech font-bold">142<span class="text-sm text-slate-500 ml-1">avg</span></div>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900 p-4 rounded-2xl border border-slate-800 shadow-lg">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-10 h-10 rounded-full border border-yellow-400/60 flex items-center justify-center text-yellow-300 font-bold">!</div>
+                                    <div class="flex-1">
+                                        <h3 class="font-bold text-white text-sm">Micro-break needed soon</h3>
+                                        <p class="text-xs text-slate-400 mt-1">Keep neutral position.</p>
+                                    </div>
+                                    <button class="bg-slate-700 hover:bg-slate-600 text-white text-xs px-4 py-2 rounded-lg font-semibold transition-colors">Check</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 bg-slate-950 border-t border-slate-800 text-center text-[11px] font-semibold">
+                            <div class="py-3 text-cyan-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+                                <span>Monitor</span>
+                            </div>
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12m-6-6h12"/></svg>
+                                <span>Recovery</span>
+                            </div>
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 3.4 15a1.65 1.65 0 0 0-1.51-1H2a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 3.4 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 3.4a1.65 1.65 0 0 0 1-1.51V2a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 3.4a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 20.6 8c.26 0 .52.05.76.14H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+                                <span>AI Coach</span>
+                            </div>
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M4 11h16M4 5h16"/></svg>
+                                <span>Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide: Recovery -->
+                <div data-slide="1" class="absolute inset-0 w-full h-full p-6 hidden flex items-center justify-center">
+                    <div class="w-full max-w-[320px] aspect-[9/19] bg-slate-950 border border-slate-800 rounded-[28px] overflow-hidden shadow-2xl flex flex-col">
+                        <div class="flex justify-between items-center px-5 py-2 bg-slate-950/90 backdrop-blur text-[10px] text-slate-400">
+                            <span>12:42 PM</span>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_rgba(34,197,94,0.8)]"></div>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/></svg>
+                            </div>
+                        </div>
+                        <div class="px-5 py-4 flex items-center justify-between">
+                            <div>
+                                <h3 class="font-tech text-lg font-bold text-white tracking-wider"><span class="text-cyan-400">WRIST</span>AI</h3>
+                                <p class="text-[11px] text-slate-400 uppercase tracking-[0.2em]">Recovery</p>
+                            </div>
+                            <div class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 space-y-4 overflow-y-auto">
+                            <h2 class="text-lg font-tech font-bold text-white border-l-4 border-cyan-400 pl-3">Recovery Protocols</h2>
+                            <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 bg-cyan-500/10 px-3 py-1 rounded-bl-xl text-cyan-400 text-[11px] font-bold font-tech">RECOMMENDED</div>
+                                <div class="flex gap-4 items-center">
+                                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-lg font-bold">FS</div>
+                                    <div class="flex-1">
+                                        <h3 class="font-bold text-white text-sm">Flexor Stretch</h3>
+                                        <p class="text-[11px] text-slate-400 mt-1">Relieves forearm tension from mouse grip.</p>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="h-1.5 w-16 bg-slate-800 rounded-full overflow-hidden">
+                                                <div class="h-full w-2/3 bg-cyan-400 rounded-full"></div>
+                                            </div>
+                                            <span class="text-[11px] text-cyan-400">2 min</span>
+                                        </div>
+                                    </div>
+                                    <button class="w-9 h-9 rounded-full bg-cyan-500 hover:bg-cyan-400 flex items-center justify-center text-slate-900 transition-colors">
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800">
+                                <div class="flex gap-4 items-center">
+                                    <div class="w-12 h-12 bg-slate-800 rounded-xl flex items-center justify-center text-lg font-bold">WR</div>
+                                    <div class="flex-1">
+                                        <h3 class="font-bold text-white text-sm">Wrist Rotations</h3>
+                                        <p class="text-[11px] text-slate-400 mt-1">Increases blood flow & mobility.</p>
+                                        <div class="flex items-center gap-2 mt-3">
+                                            <div class="h-1.5 w-16 bg-slate-800 rounded-full overflow-hidden">
+                                                <div class="h-full w-0 bg-cyan-400 rounded-full"></div>
+                                            </div>
+                                            <span class="text-[11px] text-slate-500">Start</span>
+                                        </div>
+                                    </div>
+                                    <button class="w-9 h-9 rounded-full bg-slate-700 hover:bg-slate-600 flex items-center justify-center text-white transition-colors">
+                                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 bg-slate-950 border-t border-slate-800 text-center text-[11px] font-semibold">
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+                                <span>Monitor</span>
+                            </div>
+                            <div class="py-3 text-cyan-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 6v12m-6-6h12"/></svg>
+                                <span>Recovery</span>
+                            </div>
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 8 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 3.4 15a1.65 1.65 0 0 0-1.51-1H2a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 3.4 8a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 8 3.4a1.65 1.65 0 0 0 1-1.51V2a2 2 0 1 1 4 0v.09A1.65 1.65 0 0 0 15 3.4a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 20.6 8c.26 0 .52.05.76.14H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+                                <span>AI Coach</span>
+                            </div>
+                            <div class="py-3 text-slate-400 flex flex-col items-center gap-1">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19h16M4 11h16M4 5h16"/></svg>
+                                <span>Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide: AI Coach -->
+                <div data-slide="2" class="absolute inset-0 w-full h-full p-6 hidden flex items-center justify-center">
+                    <div class="w-full max-w-[220px] aspect-[9/19] bg-slate-950 border border-slate-800 rounded-[28px] overflow-hidden shadow-xl flex flex-col">
+                        <div class="px-5 py-4 flex items-center justify-between bg-slate-900 border-b border-slate-800">
+                            <div>
+                                <h3 class="font-tech text-lg font-bold text-white tracking-wider"><span class="text-cyan-400">WRIST</span>AI</h3>
+                                <p class="text-[11px] text-slate-400 uppercase tracking-[0.2em]">AI Coach</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 space-y-4 overflow-y-auto">
+                            <h2 class="text-lg font-tech font-bold text-white border-l-4 border-purple-400 pl-3">Post-Session Analysis</h2>
+                            <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+                                <div class="flex items-center gap-2 text-slate-300 text-sm font-semibold">
+                                    <span class="px-2 py-1 rounded-lg bg-slate-800 text-[11px] font-bold uppercase text-cyan-300">AI Insight</span>
+                                    <span>Muscle fatigue trending upward.</span>
+                                </div>
+                                <p class="text-slate-400 text-sm">Recommendation: schedule a 5-minute warm-up and flexor stretch before your next match.</p>
+                                <div class="flex gap-2">
+                                    <button class="px-3 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-400 text-slate-900 text-xs font-bold">Start Warm-up</button>
+                                    <button class="px-3 py-2 rounded-lg bg-slate-800 text-white text-xs font-semibold border border-slate-700">See Tips</button>
+                                </div>
+                            </div>
+                            <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 space-y-3">
+                                <label class="text-xs text-slate-400 uppercase tracking-widest font-tech">Ask AI</label>
+                                <textarea class="w-full bg-slate-950 border border-slate-800 rounded-xl p-3 text-sm text-white" rows="3" placeholder="e.g. How do I reduce wrist strain during long editing sessions?"></textarea>
+                                <button class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-900 font-bold py-2 rounded-lg transition-all">Send</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 bg-slate-900 border-t border-slate-800 text-center text-[11px] font-semibold text-slate-400">
+                            <div class="py-2">Monitor</div>
+                            <div class="py-2">Recovery</div>
+                            <div class="py-2 text-cyan-400">AI Coach</div>
+                            <div class="py-2">Data</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide: Data -->
+                <div data-slide="3" class="absolute inset-0 w-full h-full p-6 hidden flex items-center justify-center">
+                    <div class="w-full max-w-[220px] aspect-[9/19] bg-slate-950 border border-slate-800 rounded-[28px] overflow-hidden shadow-xl flex flex-col">
+                        <div class="px-5 py-4 flex items-center justify-between bg-slate-900 border-b border-slate-800">
+                            <div>
+                                <h3 class="font-tech text-lg font-bold text-white tracking-wider"><span class="text-cyan-400">WRIST</span>AI</h3>
+                                <p class="text-[11px] text-slate-400 uppercase tracking-[0.2em]">Data</p>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.38a2 2 0 0 0-.73-2.73l-.15-.1a2 2 0 0 1-1-1.72v-.51a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                            </div>
+                        </div>
+                        <div class="p-5 flex-1 space-y-4 overflow-hidden">
+                            <h2 class="text-lg font-tech font-bold text-white border-l-4 border-cyan-400 pl-3">Performance Data</h2>
+                            <div class="bg-slate-900 rounded-2xl p-4 border border-slate-800 h-full flex flex-col">
+                                <div class="flex items-center justify-between text-slate-400 text-[11px] mb-3">
+                                    <span>Strain over Time</span>
+                                    <span class="px-2 py-1 rounded-full bg-slate-800 text-[11px] text-cyan-300">Last 7 days</span>
+                                </div>
+                                <div class="flex-1 flex items-center justify-center">
+                                    <svg viewBox="0 0 200 100" class="w-full h-full text-cyan-400">
+                                        <polyline fill="none" stroke="currentColor" stroke-width="3" points="10,80 40,70 70,60 100,30 130,40 160,20 190,35" />
+                                        <circle cx="10" cy="80" r="3" fill="currentColor" />
+                                        <circle cx="100" cy="30" r="3" fill="currentColor" />
+                                        <circle cx="160" cy="20" r="3" fill="currentColor" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-4 bg-slate-900 border-t border-slate-800 text-center text-[11px] font-semibold text-slate-400">
+                            <div class="py-2">Monitor</div>
+                            <div class="py-2">Recovery</div>
+                            <div class="py-2">AI Coach</div>
+                            <div class="py-2 text-cyan-400">Data</div>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" data-action="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                    <span class="sr-only">Previous</span>
+                    &#8592;
+                </button>
+                <button type="button" data-action="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                    <span class="sr-only">Next</span>
+                    &#8594;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- NEW SECTION: PROTOTYPE EMBED -->
+    <section id="demo" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <span class="text-cyan-400 font-tech uppercase tracking-widest text-sm">Interactive Demo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Live Prototype</h2>
+                <p class="text-slate-400 mt-4 max-w-xl mx-auto text-sm">Interact with the working concept below. This demo simulates live strain monitoring,
+    guided recovery exercises, AI tactical support and performance data for the Wrist-Relief glove.<br>
+            </div>
+
+            <!-- Phone Frame Container -->
+            <div class="relative max-w-[380px] h-[750px] mx-auto border-8 border-slate-800 rounded-[40px] shadow-2xl overflow-hidden bg-black">
+                <!-- Top Notch / Speaker -->
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-slate-800 rounded-b-xl z-20"></div>
+                
+                <!-- IFRAME EMBED -->
+                <iframe src="index.html" class="w-full h-full border-none bg-slate-950" title="Wrist Relief AI Prototype">
+                    <div class="flex items-center justify-center h-full text-white p-6 text-center">
+                        <p>Prototype not found. Please ensure index.html exists in the same directory.</p>
+                    </div>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 2: ABOUT THE TEAM -->
+    <section id="team" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-tech uppercase tracking-widest text-sm">Page 2</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">The Design Squad</h2>
+                <p class="text-slate-400 mt-4 max-w-2xl mx-auto">Group 4-8 – a team of 6 students collaborating on interaction design, usability testing, paper prototyping and digital mockup development for the Smart Wearable Wrist Relief Glove.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1: Sarah (Group Leader) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-purple-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                         <img src="profile.png" alt="Joshua Gnow Meng Foong" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Joshua Gnow Meng Foong</h4>
+                    <p class="text-purple-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Coordinated report structure, supported heuristic evaluation and usability testing, contributed to the paper prototype and presentation slides.</p>
+                </div>
+
+                <!-- Member 2: Alex (Group Member) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-cyan-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                        <img src="profile.png" alt="Lee Zhe Tse (Aaron)" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Lee Zhe Tse (Aaron)</h4>
+                    <p class="text-cyan-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Assisted with usability testing and participant recruitment, contributed to group discussions and slide presentations.</p>
+                </div>
+
+                <!-- Member 3: Michael (Group Member) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-emerald-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                         <img src="profile.png" alt="Ang Zhi Xuan" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Ang Zhi Xuan</h4>
+                    <p class="text-emerald-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Helped run usability tests and participant outreach, and wrote sections of the testing results in the report.</p>
+                </div>
+
+                <!-- Member 4: David (Group Member) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-blue-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                         <img src="profile.png" alt="David Kim" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Chan Chang Jia, William</h4>
+                    <p class="text-blue-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Assisted in usability testing and outreach, and implemented the digital mockup integration.</p>
+                </div>
+
+                <!-- Member 5: James (Group Member) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-orange-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                         <img src="profile.png" alt="James Lee" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Elizabeth Tan Wei</h4>
+                    <p class="text-orange-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Collected heuristic evaluation data, led major report writing, and helped refine the digital mockup.</p>
+                </div>
+
+                <!-- Member 6: Ryan (Group Member) -->
+                <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800 text-center hover:border-red-500/50 transition-colors">
+                    <div class="w-24 h-24 mx-auto bg-slate-800 rounded-full mb-4 overflow-hidden border-4 border-slate-700">
+                         <img src="profile.png" alt="Ryan Patel" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-white font-bold text-lg">Tang Chii Xuan</h4>
+                    <p class="text-red-400 text-xs uppercase tracking-wider font-bold mb-2">Group Member</p>
+                    <p class="text-slate-400 text-xs">Maintained and updated the paper prototype, implemented revisions after evaluations, and slide preparation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 3: ABOUT THE PRODUCT / DESIGN -->
+    <section id="product" class="py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-tech uppercase tracking-widest text-sm">Page 3</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Proposed Solution Design</h2>
+            </div>
+
+            <!-- Part A: The Problem Background -->
+            <div class="mb-20">
+                <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-red-500 pl-4">The Ergonomic Crisis</h3>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-slate-300 text-lg leading-relaxed mb-4">
+                            Long hours of gaming and studying at a desk put sustained pressure on the wrist and hand. Repetitive strain injuries such as carpal tunnel syndrome and de Quervain’s tenosynovitis 
+                            are linked to constant clicking, typing and restricted wrist movement. Our research highlights that most existing interventions, such as ergonomic chairs, posture videos and wrist supports, rely heavily on user discipline and rarely provide real-time feedback.</p>
+                        <ul class="space-y-3 text-slate-400">
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Carpal tunnel syndrome from median nerve compression </li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Tendonitis from repetitive mouse and keyboard use  </li>
+                            <li class="flex items-center gap-2"><span class="w-2 h-2 bg-red-500 rounded-full"></span> Lack of real-time, preventative ergonomic guidance  </li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-950 p-8 rounded-xl border border-slate-800 flex justify-center">
+                         <svg class="w-48 h-48 text-slate-700" viewBox="0 0 100 150" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 150 V 100 L 10 60 Q 10 40 25 40 L 30 80 M 30 80 L 30 30 Q 30 10 45 10 L 50 80 M 50 80 L 50 20 Q 50 0 65 0 L 70 80 M 70 80 L 70 30 Q 70 10 85 10 L 85 90 M 85 90 L 95 110 L 80 150" />
+                            <circle cx="50" cy="90" r="15" fill="rgba(239, 68, 68, 0.2)" stroke="red" class="animate-pulse" />
+                            <text x="50" y="130" fill="red" font-size="8" text-anchor="middle" font-family="monospace">HIGH STRAIN AREA</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part B: The AI Solution -->
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan-500 pl-4">Concept Features</h3>
+                <p class="text-slate-300 text-lg mb-8">
+                    We designed a smart wrist-relief glove and companion mobile interface that visualises wrist strain in real time, recommends recovery exercises, and explores how AI can support long-term wrist health.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-3 bg-cyan-900/30 rounded-lg text-cyan-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Prototype: AI Tactical Support</h4>
+                        </div>
+                        <p class="text-slate-400">
+                            The companion app explores how an AI “Field Medic” could analyse wrist-strain data and user reports to deliver personalised ergonomic advice. In our mockup, the AI coach generates post-session debriefs and short, actionable tips about wrist posture, 
+                            micro-breaks and recovery strategy.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="p-3 bg-purple-900/30 rounded-lg text-purple-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2z" /></svg>
+                            </div>
+                            <h4 class="text-xl font-bold text-white">Concept: Bio-Feedback Gauge</h4>
+                        </div>
+                        <p class="text-slate-400">
+                            In the final prototype, a colour-coded gauge visualises wrist strain severity (green, amber, red) and highlights when strain exceeds a critical 75% threshold. 
+                            The interface also handles error states such as “No signal” from the glove, offering Retry and Help options so users know how to respond.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 4: RESEARCH & ITERATIVE PROCESS -->
+    <section id="research" class="py-24 bg-slate-950 border-t border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-tech uppercase tracking-widest text-sm">Page 4</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Process & Iteration</h2>
+            </div>
+
+            <div class="relative border-l-2 border-slate-800 ml-4 md:ml-12 space-y-16">
+                
+                <!-- Step 1: User Research -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-cyan-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">1. User Research & Personas</h3>
+                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <p class="text-slate-400 mb-4">We conducted early research with gamers and students who regularly spend long hours at the computer. A recurring theme was that people tend to ignore early wrist discomfort, 
+                                                        and many described existing health apps as too “clinical” or boring. This led us to define our primary persona as a performance-driven gamer who cares about winning first, but still needs subtle protection against long-term injury.</p>
+                        <div class="p-4 bg-slate-950 rounded border border-slate-800">
+                            <h5 class="text-xs text-cyan-400 uppercase tracking-widest mb-1">Key Finding</h5>
+                            <p class="text-sm text-white italic">Gamers prefer an interface that feels like part of their gaming rig instead of a clinical health app.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Heuristic Evaluation -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-purple-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">2. Low-Fidelity Testing</h3>
+                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <p class="text-slate-400 mb-4">Our first paper prototype used four tabs – Monitor, Recovery, AI Coach and Data. 
+                                                        We evaluated it using Nielsen’s Usability Heuristics and discovered a problem with “Match between system and real world”: medical labels and jargon made the interface 
+                                                        feel like a clinic app rather than part of a gaming setup. Based on this, we switched to clearer, game-inspired language and simplified the hierarchy.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3: Usability Testing -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-emerald-500"></div>
+                    <h3 class="text-xl font-bold text-white mb-2">3. Hi-Fi Prototype Testing</h3>
+                    <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+                        <p class="text-slate-400 mb-4">We ran three rounds of usability testing with our interactive mockup and calculated System Usability Scale (SUS) scores of 77.5, 62.5 and 75.0 across different versions. 
+                                                        Feedback led us to clarify the strain gauge (adding the “Strain Load” label and colour logic), introduce a cumulative load slider, expand recovery content, and add warm-up 
+                                                        protocols plus educational tips about the dangers of wrist over-straining.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PAGE 5: GALLERY / MILESTONES -->
+    <section id="gallery" class="py-24 bg-slate-900 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-tech uppercase tracking-widest text-sm">Page 5</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Gallery & Milestones</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+                    <div class="aspect-video bg-slate-900 relative">
+                        <img src="initial paper prototype.png" alt="Paper prototype sketches of WristAI screens" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-white font-bold">Initial Paper Sketches</h4>
+                        <p class="text-sm text-slate-400">Exploring navigation, tab structure and early ideas for the wrist-strain dashboard.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+                    <div id="final-paper-slider" class="aspect-video bg-slate-900 relative overflow-hidden">
+                        <img data-slide="0" src="Final paper prototype1.png" alt="Final paper prototype screens set 1" class="absolute inset-0 w-full h-full object-contain">
+                        <img data-slide="1" src="Final paper prototype2.png" alt="Final paper prototype screens set 2" class="absolute inset-0 w-full h-full object-contain hidden">
+
+                        <button type="button" data-action="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Previous</span>
+                            &#8592;
+                        </button>
+                        <button type="button" data-action="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Next</span>
+                            &#8594;
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-white font-bold">Final Paper Prototype</h4>
+                        <p class="text-sm text-slate-400">Refined paper screens after heuristic evaluation and three rounds of usability testing.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+                    <div id="digital-mock-slider" class="aspect-video bg-slate-900 relative overflow-hidden rounded-2xl">
+                        <img data-slide="0" src="home page.png" alt="Digital mockup home screen" class="absolute inset-0 w-full h-full object-contain">
+                        <img data-slide="1" src="recovery page.png" alt="Digital mockup recovery screen" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="2" src="ai coach page.png" alt="Digital mockup AI coach screen" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="3" src="data page.png" alt="Digital mockup data screen" class="absolute inset-0 w-full h-full object-contain hidden">
+
+                        <button type="button" data-action="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Previous</span>
+                            &#8592;
+                        </button>
+                        <button type="button" data-action="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Next</span>
+                            &#8594;
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-white font-bold">Digital Mobile Mockup</h4>
+                        <p class="text-sm text-slate-400">High-fidelity WRISTAI app with live strain gauge, recovery sessions and AI coach.</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="group relative overflow-hidden rounded-2xl border border-slate-700 bg-slate-950">
+                    <div id="hf-slider" class="aspect-video bg-slate-900 relative overflow-hidden rounded-2xl">
+                        <img data-slide="0" src="UI1.png" alt="High-fidelity prototype screen 1" class="absolute inset-0 w-full h-full object-contain">
+                        <img data-slide="1" src="UI2.png" alt="High-fidelity prototype screen 2" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="2" src="UI3.png" alt="High-fidelity prototype screen 3" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="3" src="UI4.png" alt="High-fidelity prototype screen 4" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="4" src="UI5.png" alt="High-fidelity prototype screen 5" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="5" src="UI6.png" alt="High-fidelity prototype screen 6" class="absolute inset-0 w-full h-full object-contain hidden">
+                        <img data-slide="6" src="UI7.png" alt="High-fidelity prototype screen 7" class="absolute inset-0 w-full h-full object-contain hidden">
+
+                        <button type="button" data-action="prev" class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Previous</span>
+                            &#8592;
+                        </button>
+                        <button type="button" data-action="next" class="absolute right-3 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full w-10 h-10 flex items-center justify-center border border-white/20 transition-colors">
+                            <span class="sr-only">Next</span>
+                            &#8594;
+                        </button>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="text-white font-bold">High-Fidelity Prototype</h4>
+                        <p class="text-sm text-slate-400">Responsive website prototype summarising the Wrist-Relief AI concept and process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            function initSlider(rootId) {
+                const slider = document.getElementById(rootId);
+                if (!slider) return;
+
+                const slides = Array.from(slider.querySelectorAll('[data-slide]'));
+                const prevBtn = slider.querySelector('[data-action="prev"]');
+                const nextBtn = slider.querySelector('[data-action="next"]');
+                let index = 0;
+
+                const show = (i) => {
+                    slides.forEach((s, idx) => s.classList.toggle('hidden', idx !== i));
+                };
+                show(index);
+
+                prevBtn?.addEventListener('click', () => {
+                    index = (index - 1 + slides.length) % slides.length;
+                    show(index);
+                });
+
+                nextBtn?.addEventListener('click', () => {
+                    index = (index + 1) % slides.length;
+                    show(index);
+                });
+            }
+
+            initSlider('final-paper-slider');
+            initSlider('digital-mock-slider');
+            initSlider('hf-slider');
+            initSlider('digital-mock-slider-modal');
+
+            const modal = document.getElementById('digital-modal');
+            const openButtons = document.querySelectorAll('[data-open-digital]');
+            const closeBtn = document.getElementById('close-digital-modal');
+
+            const openModal = () => modal?.classList.remove('hidden');
+            const closeModal = () => modal?.classList.add('hidden');
+
+            openButtons.forEach(btn => btn.addEventListener('click', openModal));
+            closeBtn?.addEventListener('click', closeModal);
+            modal?.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+        })();
+    </script>
+
+    <!-- PAGE 6: REFLECTION & IMPACT -->
+    <section id="reflection" class="py-24 bg-slate-950 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-400 font-tech uppercase tracking-widest text-sm">Page 6</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2">Reflection & Future Impact</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">User Feedback on Concept</h3>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        Our concept testing successfully demonstrated that medical advice can be gamified. Our concept testing showed that a game-styled interface can make ergonomic guidance feel 
+                        less clinical and more engaging. Across three usability tests, SUS scores ranging from 62.5 to 77.5 indicated above-average usability with clear improvements between versions. 
+                        Participants especially valued the live strain monitoring and the way the gauge visually signalled when to take a break.</p>
+                    <div class="bg-slate-900 p-6 rounded-xl border-l-4 border-cyan-500">
+                        <p class="text-sm italic text-slate-400">"This is the first time I actually stopped playing to stretch because the red gauge scared me. Even as a mockup, it feels effective."</p>
+                        <p class="text-right text-xs text-cyan-400 font-bold mt-2">- User #4</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6">Design Challenges</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center font-bold text-slate-400">1</div>
+                            <div>
+                                <h4 class="text-white font-bold">Data Simulation vs. Reality</h4>
+                                <p class="text-sm text-slate-400">We did not have access to an actual sensor-equipped glove, so we simulated wrist-strain data with a logic-based model. This allowed us to test the interface and feedback, but our findings focus on usability rather than medical accuracy.</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-slate-800 rounded-full flex items-center justify-center font-bold text-slate-400">2</div>
+                            <div>
+                                <h4 class="text-white font-bold">Human-Centered AI</h4>
+                                <p class="text-sm text-slate-400">Designing the AI “Field Medic” was challenging because it needed to feel like part of a gaming setup, not a clinical app. We iterated on the tone and wording to make the messages short, empathetic and tactical, while avoiding medical diagnoses.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Final Footer -->
+            <div class="mt-24 pt-8 border-t border-slate-900 text-center text-slate-600 text-xs">
+                &copy; © 2025 Wrist-Relief AI Design Team. Created for the Human Computer Interaction course.
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
